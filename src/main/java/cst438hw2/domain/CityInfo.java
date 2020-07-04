@@ -1,26 +1,26 @@
 package cst438hw2.domain;
 
 public class CityInfo {
-	
-	 long id;
-	 String name;
-	 String countryCode;
-	 String countryName;
-	 String district;
-	 int population;
-	 double temp;
-	 String time;
-	 
-	 public CityInfo(City city, String countryName, double temp, String time) {
-		 this.id = city.getId();
-		 this.name = city.getName();
-		 this.countryCode = city.getCountryCode();
-		 this.countryName = countryName;
-		 this.district = city.getDistrict();
-		 this.population = city.getPopulation();
-		 this.temp = temp;
-		 this.time = time;
-	 }
+
+	long id;
+	String name;
+	String countryCode;
+	String countryName;
+	String district;
+	int population;
+	double temp;
+	String time;
+
+	public CityInfo(City city, String countryName, double temp, String time) {
+		this.id = city.getId();
+		this.name = city.getName();
+		this.countryCode = city.getCountryCode();
+		this.countryName = countryName;
+		this.district = city.getDistrict();
+		this.population = city.getPopulation();
+		this.temp = temp;
+		this.time = time;
+	}
 
 	public CityInfo(long id, String name, String countryCode, String countryName, String district, int population,
 			double temp, String time) {
@@ -34,7 +34,6 @@ public class CityInfo {
 		this.temp = temp;
 		this.time = time;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -148,6 +147,5 @@ public class CityInfo {
 		return "CityInfo [id=" + id + ", name=" + name + ", countryCode=" + countryCode + ", countryName=" + countryName
 				+ ", district=" + district + ", population=" + population + ", temp=" + temp + ", time=" + time + "]";
 	}
-	 
-	 
+
 }

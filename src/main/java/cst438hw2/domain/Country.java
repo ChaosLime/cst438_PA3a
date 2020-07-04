@@ -1,45 +1,46 @@
 package cst438hw2.domain;
 
-import javax.persistence.*;
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="country")
+@Table(name = "country")
 public class Country {
-	
-	@Id
-	private String code;
-	private String name;
-	
-	public Country() {
-		code = "code";
-		name = "name";
-	}
-	
-	public Country(String code, String name) {
-		this.code = code;
-		this.name = name;
-	}
 
-	public String getCode() {
-		return code;
-	}
+  @Id
+  private String code;
+  private String name;
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+  public Country() {
+    code = "code";
+    name = "name";
+  }
 
-	public String getName() {
-		return name;
-	}
+  public Country(String code, String name) {
+    this.code = code;
+    this.name = name;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public String getCode() {
+    return code;
+  }
 
-	@Override
-	public String toString() {
-		return "Country [code=" + code + ", name=" + name + "]";
-	}
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return "Country [code=" + code + ", name=" + name + "]";
+  }
 
 }
