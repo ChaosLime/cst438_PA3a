@@ -1,28 +1,17 @@
 package cst438hw2.domain;
 
-import java.sql.Date;
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.OffsetDateTime;
-import java.time.ZoneId;
 import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.TimeZone;
+
 
 public class TempAndTime {
 	public double temp;
 	public long time;
 
 	public int timezone;
-	private java.util.Date date;
 
 	public TempAndTime(double temp, long time, int timezone){
 		this.temp = temp;
@@ -74,9 +63,6 @@ public class TempAndTime {
 		String formattedTimeStr = timeColonFormatter.format(colonTime).toString();
 		
 		return formattedTimeStr;
-			
-	
-
 		
 	}
 
