@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+  <title>City Info</title>
+   <style>
+	  	.center{
+			margin: auto;
+		  	width: 60%;
+		  	background-color:lightgray;
+		  	padding: 15px;
+		}
+  </style> 
+</head>
+<body>
+	<div class ="center" id="container">
+		<h1 style="text-align:center">City<span th:inline="text"> "[[${name}]]" </span>Not Found</h1>
+	</div>
+</body>
+</html>

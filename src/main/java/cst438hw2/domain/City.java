@@ -2,7 +2,6 @@ package cst438hw2.domain;
 
 import javax.persistence.*;
 
-
 @Entity
 @Table(name="city")
 public class City {
@@ -14,8 +13,7 @@ public class City {
 	private String countryCode;
 	private String district;
 	private int population;
-	
-	
+
 	public City() {
 		this(0, "name", "code", "district", 0);
 	}
@@ -27,7 +25,6 @@ public class City {
 		this.countryCode = countryCode;
 		this.district = district;
 		this.population = population;
-
 	}
 	
 	public long getId() {
@@ -67,7 +64,4 @@ public class City {
 				+ ", population=" + population 
 				+ "]";
 	}
-	
-	
-
 }
