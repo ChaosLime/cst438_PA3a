@@ -1,10 +1,8 @@
 package cst438hw2.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import cst438hw2.domain.City;
 import cst438hw2.domain.CityInfo;
 import cst438hw2.domain.CityRepository;
@@ -29,11 +27,12 @@ public class CityService {
     List<City> city = cityRepository.findByName(cityName);
 
     // If results found, always return the first result, otherwise return null
-    if (city.size() >= 1) {
+    if (city.size() > 0) {
       City firstCity = city.get(0);
       Country country = countryRepository.findByCode(firstCity.getCountryCode());
       TempAndTime weather = weatherService.getTempAndTime(cityName);
-      return new CityInfo(firstCity, country.getName(), weather.getFarTemp(), weather.getStringTime());
+      return new CityInfo(firstCity, country.getName(), weather.getFarTemp(),
+          weather.getStringTime());
     }
 
     return null;
