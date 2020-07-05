@@ -45,7 +45,7 @@ public class CityRestControllerTest {
     City city = new City(1, "TestCity", "AAA", "DistrictTest", 99999);
 
     given(cityService.getCityInfo("TestCity"))
-        .willReturn(new CityInfo(city, "TestCountry", 99.0, "09:50 AM"));
+        .willReturn(new CityInfo(city, "TestCountry", 99.0, "12:00 PM"));
 
     MockHttpServletResponse response =
         mvc.perform(get("/api/cities/TestCity")).andReturn().getResponse();
@@ -55,7 +55,7 @@ public class CityRestControllerTest {
     CityInfo cityResult = json.parseObject(response.getContentAsString());
 
     CityInfo expectedResult =
-        new CityInfo(1, "TestCity", "AAA", "TestCountry", "DistrictTest", 99999, 99.0, "09:50 AM");
+        new CityInfo(1, "TestCity", "AAA", "TestCountry", "DistrictTest", 99999, 99.0, "12:00 PM");
 
     assertThat(cityResult).isEqualTo(expectedResult);
   }
@@ -65,7 +65,7 @@ public class CityRestControllerTest {
     City city = new City(1, "TestCity", "AAA", "DistrictTest", 99999);
 
     given(cityService.getCityInfo("TestCity"))
-        .willReturn(new CityInfo(city, "TestCountry", 99.0, "09:50 AM"));
+        .willReturn(new CityInfo(city, "TestCountry", 99.0, "12:00 PM"));
 
     MockHttpServletResponse response =
         mvc.perform(get("/api/cities/diffTestCity")).andReturn().getResponse();
@@ -73,5 +73,6 @@ public class CityRestControllerTest {
     assertThat(response.getStatus()).isEqualTo(HttpStatus.NOT_FOUND.value());
 
   }
+
 
 }
