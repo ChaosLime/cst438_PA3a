@@ -29,8 +29,10 @@ public class CityServiceTest {
   @MockBean
   private CountryRepository countryRepository;
 
+
   @Test
   public void contextLoads() {}
+
 
   @Test
   public void validCity() throws Exception {
@@ -53,6 +55,7 @@ public class CityServiceTest {
         new CityInfo(1, "TestCity", "AAA", "TestCountry", "DistrictTest", 99999, 99.0, "12:00 PM");
 
     assertThat(cityResult).isEqualTo(expectedResult);
+
   }
 
   @Test
@@ -77,7 +80,7 @@ public class CityServiceTest {
   }
 
   // The city service should always return
-  // the first result if multiple entries are found
+  // the first result if multiple entired are found
   @Test
   public void multipleCities() {
     // Create new list of cities
@@ -111,4 +114,5 @@ public class CityServiceTest {
 
     assertThat(cityResult).isEqualTo(expectedResult);
   }
+
 }
