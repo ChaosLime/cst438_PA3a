@@ -53,5 +53,4 @@ public class CityService {
     rabbitTemplate.convertSendAndReceive(fanout.getName(), "", // routing key none.
         msg);
   }
-
 }
