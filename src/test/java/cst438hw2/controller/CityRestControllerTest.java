@@ -71,8 +71,5 @@ public class CityRestControllerTest {
         mvc.perform(get("/api/cities/diffTestCity")).andReturn().getResponse();
 
     assertThat(response.getStatus()).isEqualTo(HttpStatus.NOT_FOUND.value());
-
   }
-
-
 }
